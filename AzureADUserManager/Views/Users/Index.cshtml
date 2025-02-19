@@ -1,0 +1,21 @@
+﻿@model List<AzureADUserManager.Models.AzureADUser>
+
+<h2>Azure AD Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Display Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.DisplayName</td>
+                <td>@user.Mail</td>
+            </tr>
+        }
+    </tbody>
+</table>
